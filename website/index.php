@@ -152,7 +152,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script>
-		setInterval(function() { window.location.reload(); }, 900000);  // refresh page every 15 minutes
+		setInterval(function() { window.location.reload(true); }, 900000);  // refresh page every 15 minutes
 	</script>
 </body>
 </html>
