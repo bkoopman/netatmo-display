@@ -1,0 +1,3 @@
+[submodule "Netatmo-API-PHP"]
+	path = Netatmo-API-PHP
+	url = https://github.com/bkoopman/Netatmo-API-PHP
