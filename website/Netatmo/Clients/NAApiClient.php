@@ -276,7 +276,7 @@ class NAApiClient
         // CURLE_SSL_CACERT || CURLE_SSL_CACERT_BADFILE
         if ($errno == 60 || $errno == 77)
         {
-            //echo "WARNING ! SSL_VERIFICATION has been disabled since ssl error retrieved. Please check your certificate http://curl.haxx.se/docs/sslcerts.html\n".$errno;
+            echo "WARNING ! SSL_VERIFICATION has been disabled since ssl error retrieved. Please check your certificate http://curl.haxx.se/docs/sslcerts.html\n".$errno;
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
             $result = curl_exec($ch);
         }
