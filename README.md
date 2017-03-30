@@ -10,5 +10,6 @@ Display for my Netatmo weather station, using Raspberry Pi Zero W
 
 ## Screenshots using X virtual framebuffer and CutyCapt
 
-`xvfb-run --server-args="-screen 0, 640x480x8" cutycapt --min-width=264 --min-height=176 --url=http://koopman.xs4all.nl/netatmo/?bw --out=/var/www/netatmo/image.bmp`
-`xvfb-run --server-args="-screen 0, 640x480x16" cutycapt --min-width=320 --min-height=240 --url=http://koopman.xs4all.nl/netatmo/ --out=/var/www/netatmo/image.png`
+- Black and white bitmap: `xvfb-run --server-args="-screen 0, 640x480x8" cutycapt --min-width=264 --min-height=176 --url=http://koopman.xs4all.nl/netatmo/?bw --out=/var/www/netatmo/image.bmp`
+
+- Color: `xvfb-run --server-args="-screen 0, 640x480x16" cutycapt --min-width=320 --min-height=240 --url=http://koopman.xs4all.nl/netatmo/ --out=/var/www/netatmo/image.png`
