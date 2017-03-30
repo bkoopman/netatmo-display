@@ -4,10 +4,9 @@
 	//ini_set('display_startup_errors', 1);
 	//error_reporting(E_ALL);
 
-	$username = "user@email.address";
-	$pwd = "P@ssw0rd";
 	$clientId = "10101010acb39bc818e57892";
 	$clientSecret = "1010101010ababababababab";
+	$refreshToken = "ababababab|2727272727";
 	
 	// Haarlem
 	$lat = 52.3765;  // North
@@ -26,17 +25,10 @@
 	);
 	$client = new NAWSApiClient($config);
 	
-	$client->setVariable("username", $username);
-	$client->setVariable("password", $pwd);
-	
-	if (isset($_GET["refresh_token"]))
-	{
-		// load refresh_token from url
-		$value = array (
-			"refresh_token" => $_GET["refresh_token"]
-		);
-		$client->setTokensFromStore($value);
-	}
+	$value = array (
+		"refresh_token" => $refreshToken
+	);
+	$client->setTokensFromStore($value);
 	
 	try
 	{
@@ -159,9 +151,7 @@
 ?>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="js/custom.js"></script>
 	<script>
-		addOrUpdateUrlParam("refresh_token", "<?php echo $refresh_token; ?>");
 		setInterval(function() { window.location.reload(); }, 900000);  // refresh page every 15 minutes
 	</script>
 </body>
