@@ -114,7 +114,7 @@
 			</div>
 			<div id="rain" class="col-xs-4 text-center">
 <?php
-	$rainfall = $rain["Rain"];				
+	$rainfall = $rain["sum_rain_1"];				
 	if ($rainfall > 0)
 	{
 ?>
