@@ -7,6 +7,7 @@ Display for my Netatmo weather station, using Raspberry Pi Zero W
 - [Adafruit PiTFT 2.2" HAT 320x240](https://www.kiwi-electronics.nl/raspberry-pi/raspberry-pi-expansion-boards/raspberry-pi-displays/adafruit-pitft-2-2-inch-hat-zonder-touch)
 - [PaPiRus ePaper HAT 2.7" 264x176](https://www.pi-supply.com/product/papirus-epaper-eink-screen-hat-for-raspberry-pi/)
 - [Embedded Artists 2.7" ePaper display 264x176](https://www.embeddedartists.com/products/displays/lcd_27_epaper.php)
+- [Conrad EA-LCD-009 264x176](https://www.conrad.nl/nl/embedded-artists-ea-lcd-009-developmentboard-1027644.html)
 
 ## Screenshots using X virtual framebuffer and CutyCapt
 
