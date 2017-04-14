@@ -1,3 +1,6 @@
 [submodule "Netatmo-API-PHP"]
 	path = Netatmo-API-PHP
 	url = https://github.com/bkoopman/Netatmo-API-PHP
+[submodule "PaPiRus"]
+	path = PaPiRus
+	url = https://github.com/bkoopman/PaPiRus
