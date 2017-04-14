@@ -1,13 +1,15 @@
 <?php
-	// https://developer.yahoo.com/apps/jLeJoM4u/
-	//$clientID = "dj2yJmk9aEdiU1VRODg5RUk0JmQ9WVdrOVpITTNZbXgyTjJjbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0zYg--";
-	//$clientSecret = "b7dec9d002316dda9a83d4fccd5a95d1329d3b5a";
+	// https://developer.yahoo.com/apps/
+	//$clientID = "1111111aBaBaBaB000000";
+	//$clientSecret = "111111abababab";
 	
 	$yahoo = "https://query.yahooapis.com/v1/public/yql?q=";
 	$woeid = "729636"; // https://query.yahooapis.com/v1/public/yql?q=select%20woeid%20from%20geo.places(1)%20where%20text%3D%22haarlem%2C%20nl%22&format=json
-	$query = "select%20*%20from%20weather.forecast%20where%20woeid%20=".$woeid."&format=json";
+	$query = urlencode("select * from weather.forecast where woeid = ".$woeid)."&format=json";
 	
-	$json = file_get_contents($yahoo.$query);
+	$session = curl_init($yahoo.$query);
+	curl_setopt($session, CURLOPT_RETURNTRANSFER, true);      
+	$json = curl_exec($session);
 	$obj = json_decode($json, true);
 	
 	// handle empty result by seting a refresh header

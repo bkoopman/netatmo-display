@@ -1,5 +1,5 @@
 <?php
-	$appId = "0e91f1887e4ca83d12f184ad4098f4b7";
+	$appId = "1111111111";
 	$apiUrl = "http://api.openweathermap.org/data/2.5/weather";
 	$cityId = "2755003";  // Haarlem, NL
 		
