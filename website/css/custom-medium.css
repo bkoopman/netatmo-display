@@ -16,16 +16,16 @@ body {
 	margin-bottom: 0;
 	font-size: 2.5em;
 }
-#carbon {
+#rain {
 	margin-top: .3em;
 	font-size: .7em;
-	color: #ff0000;
 }
-#rain {
+#carbon {
 	display: inline-block;
 	vertical-align: middle;
 	float: none;
 	font-size: .7em;
+	color: #ff0000;
 }
 .h1, .h2, .h3, h1, h2, h3 {margin-top: 5px;}
 small {

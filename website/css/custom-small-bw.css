@@ -13,11 +13,11 @@ body {
 	margin-bottom: 0;
 	font-size: 2.5em;
 }
-#carbon {
+#rain {
 	margin-top: .3em;
 	font-size: .7em;
 }
-#rain {
+#carbon {
 	display: inline-block;
 	vertical-align: middle;
 	float: none;

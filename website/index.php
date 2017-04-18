@@ -98,13 +98,13 @@
 <body class="<?php echo $timeofday; ?>">
 	<div class="container-fluid">
 		<div id="icon" class="row bg-primary" onclick="window.location.reload(true);">
-			<div id="carbon" class="col-xs-4 text-center">
+			<div id="rain" class="col-xs-4 text-center">
 <?php
-	$carbon = $indoor["CO2"];
-	if ($carbon > 2000)
+	$rainfall = $rain["sum_rain_1"];				
+	if ($rainfall > 0)
 	{
 ?>
-				<span class="wi wi-smoke" title="<?php echo $carbon; ?> ppm"></span>
+				<span class="wi wi-raindrops" title="<?php echo round($rainfall, 1); ?> mm/h"></span>
 <?php
 	}
 ?>
@@ -112,13 +112,13 @@
 			<div class="col-xs-4 text-center">
 				<span class="wi <?php echo $class; ?>" title="<?php echo $alt; ?>"></span>
 			</div>
-			<div id="rain" class="col-xs-4 text-center">
+			<div id="carbon" class="col-xs-4 text-center">
 <?php
-	$rainfall = $rain["sum_rain_1"];				
-	if ($rainfall > 0)
+	$carbon = $indoor["CO2"];
+	if ($carbon > 2000)
 	{
 ?>
-				<span class="wi wi-raindrops" title="<?php echo $rainfall; ?> mm/h"></span>
+				<span class="wi wi-smoke" title="<?php echo $carbon; ?> ppm"></span>
 <?php
 	}
 ?>
