@@ -1,0 +1,17 @@
+#!/bin/bash
+
+OUT_DIR=/var/www/html
+FILE=image.bmp
+URL=http://koopman.xs4all.nl/netatmo/?bw
+SCREEN_SIZE=640x480x8
+WIDTH=264
+HEIGHT=176
+
+# using cutycapt over xvfb to capture screenshot
+xvfb-run --server-args="-screen 0, $SCREEN_SIZE" cutycapt --min-width=$WIDTH --min-height=$HEIGHT --url=$URL --out=$OUT_DIR/$FILE
+
+# clear the screen
+#/usr/local/bin/papirus-clear
+
+# draw image on the screen
+/usr/local/bin/papirus-draw $OUT_DIR/$FILE
