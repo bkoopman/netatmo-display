@@ -1,9 +1,15 @@
+# gpiozero
+
+    sudo apt-get install python3-gpiozero python-gpiozero
+
+Documentation is available at https://gpiozero.readthedocs.io/
+
 ## /etc/rc.local
 
     # shutdown script listening to GPIO
     python /home/pi/scripts/shutdown.py &
 
-    # update-weather script listening on GPIO
+    # update-weather script listening to GPIO
     python /home/pi/scripts/update-weather.py &
 
 ## crontab -e
