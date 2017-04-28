@@ -6,6 +6,9 @@ Documentation is available at https://gpiozero.readthedocs.io/
 
 ## /etc/rc.local
 
+	# display splash screen
+	python /home/pi/scripts/splash.py &
+
     # shutdown script listening to GPIO
     python /home/pi/scripts/shutdown.py &
 
