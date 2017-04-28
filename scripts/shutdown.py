@@ -6,6 +6,7 @@ from signal import pause
 
 # shutdown function
 def shutdown():
+	check_call(["/home/pi/scripts/splash.py"])
 	check_call(["sudo", "poweroff"])
 
 # PaPiRus HAT buttons (GPIO numbers)
