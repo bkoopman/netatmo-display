@@ -100,12 +100,15 @@
 		<div id="icon" class="row bg-primary" onclick="window.location.reload(true);">
 			<div id="rain" class="col-xs-4 text-center">
 <?php
-	$rainfall = $rain["sum_rain_1"];				
-	if ($rainfall > 0)
+	if (isset($rain["sum_rain_1"]))
 	{
+		$rainfall = $rain["sum_rain_1"];			
+		if ($rainfall > 0)
+		{
 ?>
 				<span class="wi wi-raindrops" title="<?php echo round($rainfall, 1); ?> mm/h"></span>
 <?php
+		}
 	}
 ?>
 			</div>
