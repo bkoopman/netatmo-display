@@ -28,6 +28,7 @@ body {
 	color: #ff0000;
 }
 .h1, .h2, .h3, h1, h2, h3 {margin-top: 5px;}
+h2 span {font-size: 60%;}
 small {
 	font-size: 65%;
 	color: #6699cc;

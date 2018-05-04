@@ -124,12 +124,28 @@
 				<span class="wi wi-smoke" title="<?php echo $carbon; ?> ppm"></span>
 <?php
 	}
+	
+	// split integer and fraction digits of temperature
+	$outdoorTemp = explode(".", $outdoor["Temperature"]);
+	$outdoorTempInt = $outdoorTemp[0];
+	$outdoorTempFrac = "";
+	if (count($outdoorTemp) > 1) 
+	{
+		$outdoorTempFrac = "." . $outdoorTemp[1];
+	}
+	$indoorTemp = explode(".", $indoor["Temperature"]);
+	$indoorTempInt = $indoorTemp[0];
+	$indoorTempFrac = "";
+	if (count($indoorTemp) > 1) 
+	{
+		$indoorTempFrac = "." . $indoorTemp[1];
+	}
 ?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-6 text-center"><small>OUTDOOR</small><h2><?php echo $outdoor["Temperature"]; ?>&#176; <small>C</small></h2></div>
-			<div class="col-xs-6 text-center"><small>INDOOR</small><h2><?php echo $indoor["Temperature"]; ?>&#176; <small>C</small></h2></div>
+			<div class="col-xs-6 text-center"><small>OUTDOOR</small><h2><?php echo $outdoorTempInt; ?><span><?php echo $outdoorTempFrac; ?></span>&#176; <small>C</small></h2></div>
+			<div class="col-xs-6 text-center"><small>INDOOR</small><h2><?php echo $indoorTempInt; ?><span><?php echo $indoorTempFrac; ?></span>&#176; <small>C</small></h2></div>
 		</div>
 		<div class="row">
 			<div class="col-xs-6 text-center"><small>PRESSURE</small><h3><?php echo round($indoor["Pressure"]); ?> <small>mbar</small></h3></div>

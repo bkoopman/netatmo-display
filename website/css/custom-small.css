@@ -26,6 +26,7 @@ body {
 	margin-top: 3px;
 	margin-bottom: 3px;
 }
+h2 span {font-size: 60%;}
 small {
 	font-size: 65%;
 	color: #777;
